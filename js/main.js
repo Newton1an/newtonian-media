@@ -1,4 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
+    $(window).on('load', function() {
+    
+        // vide.js
+        $('#header').vide('./video/vid', {
+            bgColor: '#FFFFFF'
+        })
+    
+    })
     const buttons = document.querySelectorAll(".portfolio-nav-btn");
     const portfolioCardsWrapper = document.getElementById("portfolio-cards");
 
