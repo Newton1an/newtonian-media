@@ -1,12 +1,39 @@
 document.addEventListener("DOMContentLoaded", function () {
+    let desktopVideoInitialized = false;
+
+    function initDesktopVideo() {
+        if (window.innerWidth > 768 && !desktopVideoInitialized) {
+            $('#header').vide('./video/vid', {
+                bgColor: '#FFFFFF',
+                poster: './img/desktop-poster.jpg'
+            });
+            desktopVideoInitialized = true;
+        }
+    }
+
     $(window).on('load', function() {
+        $('#video-mobile').vide('./video/vid-mobile', {
+            bgColor: '#FFFFFF',
+            poster: './img/mobile-poster.jpg'
+        });
+        initDesktopVideo();
+
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                $('#video-mobile').hide();
+                $('#header').show();
+                initDesktopVideo();
+            } else {
+                if (desktopVideoInitialized) {
+                    $('#header').vide('destroy');
+                    desktopVideoInitialized = false;
+                }
+                $('#header').hide();
+                $('#video-mobile').show();
+            }
+        });
+    });
     
-        // vide.js
-        $('#header').vide('./video/vid', {
-            bgColor: '#FFFFFF'
-        })
-    
-    })
     const buttons = document.querySelectorAll(".portfolio-nav-btn");
     const portfolioCardsWrapper = document.getElementById("portfolio-cards");
 

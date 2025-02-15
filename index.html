@@ -10,8 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-    <header class="header" id="header">
+    <header class="video-mobile" id="video-mobile">
+        <h1 class="header-title">Максим Виноградов</h1>
+        <p class="header-subtitle">дизайнер, разработчик, композитор</p>
+    </header>
+
+
+    <header class="header" id="header" data-preload="auto">
         <h1 class="header-title">Максим Виноградов</h1>
         <p class="header-subtitle">дизайнер, разработчик, композитор</p>
         <div class="header-arrow">
@@ -19,21 +24,39 @@
         </div>
     </header>
 
-    <main>
-        <nav class="portfolio-nav">
-            <button class="portfolio-nav-btn active" data-category="design">Дизайн</button>
-            <button class="portfolio-nav-btn" data-category="music">Музыка</button>
-            <button class="portfolio-nav-btn" data-category="coding">Программирование</button>
-            <button class="portfolio-nav-btn" data-category="projects">Проекты</button>
-        </nav>
+    <header class="biography">
+        <div class="container-bio">
+            <h2 class="biography-header">Биография</h2>
+            <div class="content">
+                <div class="biography-img">
+                    <img src="./img/bio/img-bio.jpg" alt="">
+                </div>
+                <div class="biography-text">
+                    <p>Максим Виноградов родился в 2006 году в Иваново, Россия. С рождения он был серьезно болен из-за чего большую часть детства провел в больнице. Несмотря на трудности, Максим сохранял оптимизм и стремление к нормальной жизни.</p>
+                    <p>Из-за насмешек одноклассников он стал меньше общаться и нашел поддержку в музыке. Его интерес к электронной музыке появился, когда старший брат познакомил его с творчеством Boris Brejcha, показав недавно вышедший микс «Boris Brejcha @ Tomorrowland Belgium 2018». В 12 лет Максим начал создавать собственные музыкальные треки как хобби.</p>
+                    <p>С 2020 года Максим полностью посвятил себя музыке и вскоре осознал, что может выражать свои мысли и идеи через фотографии и дизайн.</p>
+                    <p>К 2024 году, переосмыслив все что делал ранее, он четко понял, что знания, полученные в этих областях, помогут ему создавать необычайно сложные и интересные проекты. Сегодня Максим Виноградов продолжает развиваться как артист и стремится к новым достижениям в различных областях искусства.</p>
+                    <p>«wehatelinearthinking» - 2025</p>
+                </div>
+            </div>
 
+        </div>
+    </header>
+
+    <main>
         <section class="portfolio-content">
             <div class="container">
                 <h2 class="portfolio-header">Портфолио</h2>
-                <div class="portfolio-cards-wrapper" id="portfolio-cards">
-                </div>
+                <nav class="portfolio-nav">
+                    <button class="portfolio-nav-btn active" data-category="design">Дизайн</button>
+                    <button class="portfolio-nav-btn" data-category="music">Музыка</button>
+                    <button class="portfolio-nav-btn" data-category="coding">Программирование</button>
+                    <button class="portfolio-nav-btn" data-category="projects">Проекты</button>
+                </nav>
+                <div class="portfolio-cards-wrapper" id="portfolio-cards"></div>
             </div>
         </section>
+
     </main>
 
     <footer class="footer">
@@ -54,7 +77,8 @@
                 </div>
                 <div class="footer-copyright">
                     <div class="footer-copyright-name">© Максим Виноградов</div>
-                    <p class="footer-copyright-text">Все права защищены</p>
+                </div>
+                <div class="footer-copyright-text">Все права защищены</div>
                 </div>
             </div>
         </div>
